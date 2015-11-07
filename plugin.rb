@@ -3,3 +3,5 @@
 # authors: Quentin Gerodel
 
 register_asset "javascripts/outbond-links-swaper.js", :server_side
+
+enabled_site_setting :outbound_url_base

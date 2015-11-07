@@ -23,7 +23,7 @@ Discourse.Dialect.on("parseNode", function(event) {
       domain = extractDomain(url);
 
   if(domain && domain !== Discourse.BaseUrl) {
-    url = "http://sh.st/st/15e340acb854c86386a6e2d3240d7f24/" + url;
+    url = Discourse.SiteSettings.outbound_url_base + url;
     node[1].href = url;
   }
 

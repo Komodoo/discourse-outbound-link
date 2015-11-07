@@ -1,0 +1,4 @@
+plugins:
+  outbound_url_base:
+    default: ""
+    client: true
