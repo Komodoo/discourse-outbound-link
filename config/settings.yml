@@ -1,4 +1,4 @@
 plugins:
   outbound_url_base:
-    default: ""
+    default: "%q"
     client: true

@@ -22,8 +22,8 @@ Discourse.Dialect.on("parseNode", function(event) {
   var url = node[1].href,
       domain = extractDomain(url);
 
-  if(domain && domain !== Discourse.BaseUrl) {
-    url = Discourse.SiteSettings.outbound_url_base + url;
+  if(domain && domain !== Discourse.BaseUrl && Discourse.SiteSettings.outbound_url_base !== "") {
+    url = Discourse.SiteSettings.outbound_url_base.replace('%q', url);
     node[1].href = url;
   }
 
